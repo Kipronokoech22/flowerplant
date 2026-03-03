@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer"; // Import Footer
 import manImage from "../assets/images/man.png"; // Import left image
 import womanImage from "../assets/images/woman.png"; // Import right image
 import "./About.css"; // Import styles
@@ -21,6 +22,9 @@ function About() {
           />
         </div>
       </div>
+      
+      
+      <Footer />
     </div>
   );
 }

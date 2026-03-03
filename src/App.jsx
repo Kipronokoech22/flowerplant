@@ -1,8 +1,9 @@
+import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./views/Home";
-import MyPlants from "./views/MyPlants";
-import About from "./views/About";
+import Layout from "./Layout"; // Layout includes Header and handles structure
+import Home from "./views/Home"; // Home page
+import MyPlants from "./views/MyPlants"; // My Plants page
+import About from "./views/About"; // About page
 
 function ErrorPage() {
   return (
@@ -14,14 +15,13 @@ function ErrorPage() {
 }
 
 function App() {
-  // Router setup
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
-      errorElement: <ErrorPage />, 
+      element: <Layout />, // Header will only render once via Layout
+      errorElement: <ErrorPage />,
       children: [
-        { index: true, element: <Home /> },
+        { index: true, element: <Home /> }, // Default root path -> Home
         { path: "my-plants", element: <MyPlants /> },
         { path: "about", element: <About /> },
       ],

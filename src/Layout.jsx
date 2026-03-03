@@ -1,24 +1,16 @@
 import React from "react";
-import { Outlet, useLocation } from "react-router-dom"; // Import useLocation for route checking
-import Footer from "./components/Footer"; // Import Footer Component
-import Header from "./components/Header"; // Import Header Component
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
 
 function Layout() {
-  const location = useLocation(); // Get the current URL path
-  const hideFooterRoutes = ["/", "/my-plants"]; // Add "/" to the routes where the footer should be hidden
-
   return (
-    <div className="layout">
-      {/* Header */}
+    <div>
+      {/* Header will always be visible */}
       <Header />
-
-      {/* Main content area */}
+      {/* Outlet is where nested routing components will be rendered */}
       <main>
         <Outlet />
       </main>
-
-      {/* Conditionally Render Footer */}
-      {!hideFooterRoutes.includes(location.pathname) && <Footer />}
     </div>
   );
 }
