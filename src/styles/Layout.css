@@ -1,0 +1,19 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the layout covers the full height */
+}
+
+header {
+  background-color: #4FBE9F; /* Green header background */
+  padding: 20px;
+  text-align: center;
+  font-family: "Comfortaa", sans-serif;
+}
+
+main {
+  flex: 1; /* Allow main content to grow and fill available space */
+  padding: 20px;
+  background-color: #fff; /* Default background color for the main area */
+  box-sizing: border-box;
+}

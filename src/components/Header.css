@@ -1,0 +1,113 @@
+/* HEADER STYLES */
+.header {
+  width: 100%;
+  height: 92px;
+  background-color: #FAF6ED;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO SECTION */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #4FBE9F;
+  letter-spacing: -2.88px;
+  text-decoration: none;
+  width: 188px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4FBE9F;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 20px;
+  }
+
+  .nav {
+    gap: 30px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+    width: auto;
+  }
+
+}
+.navigation-menu a.active {
+  position: relative; /* Position this element relative to allow absolute positioning for the line */
+  color: #fff;
+  background-color: #4FBE9F;
+}
+
+.navigation-menu a.active::after {
+  content: ''; /* Add the decorative line under the active link */
+  position: absolute;
+  bottom: -4px; /* Adjust this for the vertical spacing of the line */
+  left: 0; /* Align the line to the left of the text */
+  width: 100%; /* Match the width of the active link text */
+  height: 2px; /* Set the height of the line */
+  background-image: url('../assets/images/line.png'); /* Use your line image */
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the line scales properly */
+}

@@ -1,0 +1,91 @@
+
+.about-footer {
+  background-color: rgba(79, 190, 159, 1); 
+  color: #fff;
+  padding: 60px 40px;
+  font-family: "Comfortaa", sans-serif;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  width: 100%;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column.left {
+  text-align: left;
+}
+
+.footer-column.right {
+  text-align: right;
+}
+
+.footer-column h3,
+.footer-bottom h3 {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: -2.88px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.footer-bottom h3 {
+  font-weight: 700;
+}
+
+.footer-column p {
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.social-icon {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}

@@ -1,0 +1,180 @@
+/* MY PLANTS PAGE */
+.my-plants {
+  width: 100vw; /* Full screen width */
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BANNER SECTION */
+.plants-hero {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SEARCH AND CREATE SECTION */
+.search-create-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 20px;
+}
+
+.search-bar {
+  width: 774px;
+  height: 59px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 0 16px; /* Adjust padding to align text properly */
+  font-family: "Comfortaa", sans-serif;
+  font-size: 16px;
+  color: #000;
+  background-color: #fff;
+  box-sizing: border-box; /* Ensures padding is included in height/width */
+}
+
+.search-bar::placeholder {
+  color: #999; /* Lighter text for placeholder */
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #4FBE9F; /* Match theme with light green border on focus */
+}
+
+.create-btn {
+  width: 135px;
+  height: 59px; /* Match button height to search bar */
+  background-color: #4FBE9F;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px; /* Match search bar radius */
+  font-family: "Comfortaa", sans-serif;
+  font-size: 24px;
+  font-weight: bold; /* Styling for consistency with Figma */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.create-btn:hover {
+  opacity: 0.9;
+}
+
+.create-btn:active {
+  opacity: 0.8;
+}
+
+/* PLANTS TABLE */
+.plants-table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.plants-table th {
+  background-color: #4FBE9F; /* Green header background */
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  text-align: left;
+}
+
+.plants-table td {
+  padding: 12px 16px;
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.plants-table tbody tr:nth-child(even) {
+  background-color: rgba(79, 190, 159, 0.1); /* Light green for even rows */
+}
+
+.plants-table tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+.plants-table tbody tr:hover {
+  background-color: rgba(79, 190, 159, 0.4); /* Highlight row on hover */
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .search-create-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%; /* Full-width input for smaller screens */
+  }
+
+  .create-btn {
+    width: 100%; /* Full-width button to match search bar */
+  }
+
+  .plants-table {
+    width: 100%;
+    margin: 0 auto 10px;
+    font-size: 14px;
+  }
+
+  .plants-table th,
+  .plants-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .plants-hero {
+    height: 200px; /* Reduce height for smaller screens */
+  }
+
+  .search-create-section {
+    padding: 10px;
+  }
+
+  .plants-table th,
+  .plants-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* DELETE BUTTON STYLES */
+.delete-btn {
+  color: #fff;
+  background-color: #FF6B6B; /* Red for delete action */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #FF5252; /* Slightly lighter red on hover */
+}
+
+.delete-btn:active {
+  background-color: #FF3B3B; /* Darker red on click */
+}
