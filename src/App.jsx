@@ -15,18 +15,23 @@ function ErrorPage() {
 }
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />, // Header will only render once via Layout
+        errorElement: <ErrorPage />,
+        children: [
+          { index: true, element: <Home /> }, // Default root path -> Home
+          { path: "my-plants", element: <MyPlants /> },
+          { path: "about", element: <About /> },
+        ],
+      },
+    ],
     {
-      path: "/",
-      element: <Layout />, // Header will only render once via Layout
-      errorElement: <ErrorPage />,
-      children: [
-        { index: true, element: <Home /> }, // Default root path -> Home
-        { path: "my-plants", element: <MyPlants /> },
-        { path: "about", element: <About /> },
-      ],
-    },
-  ]);
+      basename: "/flowerplant", // Add this line for GitHub Pages base URL
+    }
+  );
 
   return <RouterProvider router={router} />;
 }
